@@ -1,0 +1,8 @@
+# Treat All Python Files As Text
+*.py text eol=lf
+
+# Explicitly Mark As Python (GitHub Linguist)
+*.py linguist-language=Python
+
+# Better Diffs For Python Files
+*.py diff=python

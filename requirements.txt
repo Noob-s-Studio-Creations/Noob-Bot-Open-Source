@@ -1,0 +1,11 @@
+discord.py
+PyNaCl
+yt-dlp
+requests
+psutil
+colorama
+gTTS
+langdetect
+pillow
+tflink
+deep-translator

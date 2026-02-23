@@ -1,0 +1,10 @@
+## Command Docs For `/templink`
+You Can Upload File And Get A **Direct Link** Now!
+So Yea... This Is What You Can Do With The Link!
+
+* **You Can Use The Link With Another The Bot Command:** If You're Upload Your Music Or MP3 File You Can Put The Link To The Bot `/play` Command To Play It!
+
+Note: File You Upload Will Got Deleted From Our Server After Anything Done...
+Note2: The Link Will Expired In 7 Days...
+
+-# Written By: PrayoadMii
