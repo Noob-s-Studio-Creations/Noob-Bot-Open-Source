@@ -11,6 +11,14 @@ Like...
 
 * **requirements.txt:** This Is **Important** Too! I Don't Need To Pip Install Every Single Library Anymore!
 
+# **HOW TO RUN**
+
+**You May Install All Library In `requirements.txt` First**
+
+**And Replace Your Tokens/Required Info In `botconfig.py`**
+
+**Before Run It With `python bootstrap.py`**
+
 # **IMPORTANT NOTES**
 
 **Bot May Not Fully Work On An Raspberry Pi Or Others VPS**
