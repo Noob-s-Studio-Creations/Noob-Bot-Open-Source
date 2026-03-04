@@ -2,12 +2,13 @@ import discord
 import os
 
 from discord import app_commands
+from discord.ext import commands
 
 from library.core.helpmodule.randomtextcreator import GetRandomText
 
 MAX_MESSAGE_LENGTH = 1900
 
-def setup(bot):
+def setup(bot: commands.bot.Bot):
 
     @bot.tree.command(
         name="documentations",

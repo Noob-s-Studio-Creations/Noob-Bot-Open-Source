@@ -2,11 +2,12 @@ import discord
 import asyncio
 
 from discord import app_commands
+from discord.ext import commands
 from deep_translator import GoogleTranslator
 
 from library.core.helpmodule import textfilter
 
-def setup(bot):
+def setup(bot: commands.bot.Bot):
     @bot.tree.context_menu(name="Translate This")
     @app_commands.allowed_installs(
         guilds=True,

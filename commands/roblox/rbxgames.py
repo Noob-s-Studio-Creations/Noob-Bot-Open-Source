@@ -7,8 +7,7 @@ from discord.ext import commands
 from library.roblox import games
 from library.core.helpmodule.numberstringconverto import ConverToNumberThatAbleToRead
 
-def setup(bot):
-
+def setup(bot: commands.bot.Bot):
     @bot.tree.command(
         name="rbxgame",
         description="Get Roblox Game Info By PlaceId Or UniverseId"

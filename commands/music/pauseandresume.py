@@ -1,12 +1,11 @@
 import discord
 
 from discord import app_commands
-from discord.app_commands import Choice
+from discord.ext import commands
 
 from library.music.instances import get_player
-from library.music.embedui import QueueView
 
-def setup(bot):
+def setup(bot: commands.bot.Bot):
     @bot.tree.command(
         name="pause",
         description="Pause The Music"

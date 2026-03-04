@@ -1,10 +1,11 @@
 import discord
 
 from discord import app_commands
+from discord.ext import commands
 
 from library.music.instances import get_player
 
-def setup(bot):
+def setup(bot: commands.bot.Bot):
     @bot.tree.command(
         name="join",
         description="Make Me Join Your Voice Channel!"

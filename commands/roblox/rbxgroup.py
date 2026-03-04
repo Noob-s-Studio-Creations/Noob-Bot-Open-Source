@@ -6,8 +6,7 @@ from discord.ext import commands
 
 from library.roblox import groups
 
-def setup(bot):
-
+def setup(bot: commands.bot.Bot):
     @bot.tree.command(
         name="rbxgroup",
         description="Get Roblox Group Info By GroupId"

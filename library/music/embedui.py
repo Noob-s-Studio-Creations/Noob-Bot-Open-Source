@@ -2,8 +2,6 @@ import discord
 
 from discord.ui import View, Select
 
-from library.music.source import YTDLSource
-
 class QueueSelect(Select):
     def __init__(self, player):
         self.player = player

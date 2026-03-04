@@ -2,9 +2,10 @@ import discord
 import datetime
 
 from discord import app_commands
+from discord.ext import commands
 from discord.app_commands import Choice
 
-def setup(bot):
+def setup(bot: commands.bot.Bot):
 
     @bot.tree.command(
         name="prayoadmiitime",

@@ -13,7 +13,7 @@ from library.core.cmdhelpermodule import gifcreator
 from library.core.helpmodule.randomtextcreator import GetRandomText
 from library.core.helpmodule import temphost as tmphost
 
-def setup(bot):
+def setup(bot: commands.bot.Bot):
 
     @bot.tree.command(
         name="tts",

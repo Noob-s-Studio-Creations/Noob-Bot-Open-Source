@@ -2,7 +2,6 @@ import discord
 import asyncio
 import os
 
-from discord.app_commands import Choice
 from discord.ext import commands
 from discord import app_commands
 
@@ -11,8 +10,7 @@ from library.core.helpmodule import textfilter
 from library.core.cmdhelpermodule import memeimagecreator as memeedit
 from library.core import console
 
-def setup(bot):
-    
+def setup(bot: commands.bot.Bot):
     @bot.tree.command(
         name="memecaption",
         description="Add Caption Text To Your Image! (Filter Needed!)"

@@ -1,27 +1,13 @@
 import discord
 
 from discord import app_commands
+from discord.ext import commands
 from discord.app_commands import Choice
 
 from library.music.instances import get_player
 from library.music.embedui import QueueView
-from library.core import console
 
-def setup(bot):
-    @bot.tree.command(
-        name="play",
-        description="Play Music Or Add That To Queue"
-    )
-    @app_commands.allowed_contexts(
-        guilds=True,
-        dms=False,
-        private_channels=True
-    )
-    async def play(interaction: discord.Interaction, query: str):
-        await interaction.response.defer(ephemeral=True)
-        await interaction.followup.send("# Hey Man!\n\nThis Command Was UnUsed\nPlease Use `/add`")
-
-
+def setup(bot: commands.bot.Bot):
     @bot.tree.command(
         name="add",
         description="Play Music Or Add That To Queue"

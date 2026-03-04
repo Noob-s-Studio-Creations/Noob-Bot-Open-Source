@@ -1,9 +1,0 @@
-# Here Are Simple Terminal Commands When Bot Run On Raspberry Pi Server
-
-Create VM: python3 -m venv PrayoadMii
-
-Launch VM: source PrayoadMii/bin/activate
-
-Stop VM: deactivate
-
-Update Your PI: sudo apt full-upgrade

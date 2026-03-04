@@ -3,9 +3,9 @@ import tempfile
 import os
 
 import botconfig as config
-from discord import app_commands
 
-from library.core.helpmodule.voidhostapi import GetVoidServerCompleteData
+from discord.ext import commands
+from discord import app_commands
 
 def CheckBotTempUsageAsMB():
     bot_temp_dir = os.path.join(
@@ -29,7 +29,7 @@ def CheckBotTempUsageAsMB():
     
     return total_size / (1024 * 1024)
 
-def setup(bot):
+def setup(bot: commands.bot.Bot):
 
     @bot.tree.command(
         name="botstat",
@@ -70,44 +70,6 @@ def setup(bot):
             name="Connected VC",
             value=f"{str(len(bot.voice_clients))}",
             inline=True
-        )
-
-        await interaction.followup.send(embed=embed)
-
-    @bot.tree.command(
-        name="serverstat",
-        description="Get Current Server Performance Statistics"
-    )
-    @app_commands.allowed_installs(
-        guilds=True,
-        users=True
-    )
-    @app_commands.allowed_contexts(
-        guilds=True,
-        dms=True,
-        private_channels=True
-    )
-    async def serverstat(interaction: discord.Interaction):
-        await interaction.response.defer()
-
-        Data = GetVoidServerCompleteData()
-
-        embed = discord.Embed(
-            title="Server Performance Statistics",
-            color=discord.Color.gold()
-        )
-        embed.add_field(
-            name="RAM Usage",
-            value=f"{str(Data.get('memory', 'N/A'))}%",
-            inline=True
-        )
-        embed.add_field(
-            name="Temp Files",
-            value=f"{CheckBotTempUsageAsMB():.2f} MB",
-            inline=True
-        )
-        embed.set_footer(
-            text="Statistics Provided By VoidHosting"
         )
 
         await interaction.followup.send(embed=embed)

@@ -1,10 +1,12 @@
 import discord
 import asyncio
+
 from library.core.helpmodule import textfilter
+
 from discord import app_commands
+from discord.ext import commands
 
-def setup(bot):
-
+def setup(bot: commands.bot.Bot):
     @bot.tree.command(
         name="prayoadmiistyle",
         description="Turn Your Messages Into PrayoadMii Style (Filtered Needed!)"

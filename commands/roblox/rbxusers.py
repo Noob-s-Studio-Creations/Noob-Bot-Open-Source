@@ -6,8 +6,7 @@ from discord.ext import commands
 
 from library.roblox import users as rbxuser
 
-def setup(bot):
-
+def setup(bot: commands.bot.Bot):
     @bot.tree.command(
         name="rbxuser",
         description="Find A Roblox User By Their Username"
